@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<h2>로그인</h2>
+<h2>로그인 봄이즐</h2>
 
 <form action="login.do" method="post" name="frm">
 	<table>
