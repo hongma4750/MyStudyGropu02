@@ -42,12 +42,17 @@ public class DeleteMember extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		
-		int result = MemberDAO.getInstance().deleteMember(request.getParameter("m_id"),request.getParameter("m_pw"));
+		String m_id = request.getParameter("m_id");
+		String m_pw = request.getParameter("m_pw");
+		
+		MemberDAO memberDao = MemberDAO.getInstance();
+		
+		int result = memberDao.deleteMember(m_id,m_pw);
 		
 		if(result ==1){
 			HttpSession session = request.getSession();
 			session.invalidate();
-			RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("Index.jsp");
 			dispatcher.forward(request, response);
 		}else {
 			messagePrint("wrong info",response);

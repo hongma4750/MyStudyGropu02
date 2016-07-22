@@ -5,8 +5,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>회원 관리</title>
-<script type="text/javascript" src="Javascript/member.js"></script>
-
+<script src="Javascript/Member/loginCheck.js"></script>
+<script src="Javascript/Member/idFind.js"></script>
+<script src="Javascript/Member/pwFind.js"></script>
+<script src="Javascript/Member/joinMove.js"></script>
   
 </head>
 <body>
@@ -30,7 +32,7 @@
 				<input type="submit" value="로그인" onclick="return loginCheck()">&nbsp;&nbsp;
 				<input type="button" value="ID찾기" onclick="return idFind()">&nbsp;&nbsp;
 				<input type="button" value="PW 찾기" onclick="pwFind()">&nbsp;&nbsp;
-				<input type="button" value="회원가입" onclick="location.href='join.do'">
+				<input type="button" value="회원가입" onclick="joinMove()">
 			</td>
 			
 		</tr>

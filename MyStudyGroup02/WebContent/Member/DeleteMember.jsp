@@ -6,7 +6,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<script type="text/javascript" src="Javascript/member.js"></script>
+<script src="Javascript/Member/deleteRealy.js"></script>
+<script src="Javascript/Member/goBack.js"></script>
 </head>
 <body>
 
@@ -24,8 +25,8 @@
 </tr>
 <tr>
 	<td colspan="2">
-		<input type="submit" value="탈퇴" onclick="return deleterealy()">
-		<input type="button" value="취소" onclick="javascript:history.back(-1)">
+		<input type="submit" value="탈퇴" onclick="return deleteRealy()">
+		<input type="button" value="취소" onclick="goBack(3)">
 	</td>
 </tr>
 </table>

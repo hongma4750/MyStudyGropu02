@@ -5,7 +5,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>회원가입</title>
-<script type="text/javascript" src="Javascript/member.js"></script>
+<script src="Javascript/Member/joinCheck.js"></script>
+<script src="Javascript/Member/idCheck.js"></script>
+<script src="Javascript/Member/goBack.js"></script>
 </head>
 <body>
 
@@ -73,7 +75,7 @@
 			<td colspan="2" align="center">
 				<input type="submit" value="저장" onclick="return joinCheck()">
 				<input type="reset" value="리셋">
-				<input type="button" value="취소" onclick="javascript:history.back(-1)">
+				<input type="button" value="취소" onclick="goBack(1)">
 			</td>
 		</tr>
 		

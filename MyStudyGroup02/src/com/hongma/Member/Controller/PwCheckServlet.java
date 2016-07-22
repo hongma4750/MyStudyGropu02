@@ -45,13 +45,17 @@ public class PwCheckServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		request.setCharacterEncoding("UTF-8");
 		
-		String m_pw = MemberDAO.getInstance().getM_PW(request.getParameter("m_name"), request.getParameter("m_id"), request.getParameter("m_email"));
+		String m_name = request.getParameter("m_name");
+		String m_id = request.getParameter("m_id");
+		String m_email = request.getParameter("m_email");
+		
+		String m_pw = MemberDAO.getInstance().getM_PW(m_name, m_id, m_email);
 		
 		if(m_pw == null || m_pw.equals("")){
 			messagePrint("no Info",response);
 		}else{
 			try {
-				new SendEmail(request.getParameter("m_email"), m_pw);
+				new SendEmail(m_email, m_pw);
 				messagePrint("all finish. check your email",response);
 			} catch (AddressException e) {
 				// TODO Auto-generated catch block

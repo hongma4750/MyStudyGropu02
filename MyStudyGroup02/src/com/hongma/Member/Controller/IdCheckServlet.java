@@ -42,7 +42,7 @@ public class IdCheckServlet extends HttpServlet {
 		request.setAttribute("m_id", m_id);
 		request.setAttribute("result", result);
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("Member/idcheck.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("Member/Idcheck.jsp");
 		dispatcher.forward(request, response);
 	}
 

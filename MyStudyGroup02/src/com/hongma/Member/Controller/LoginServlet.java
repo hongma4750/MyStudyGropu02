@@ -40,7 +40,7 @@ public class LoginServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		
 		if(session.getAttribute("loginUser") !=null){
-			url="main.jsp";
+			url="Main.jsp";
 		}
 		
 		
@@ -68,7 +68,7 @@ public class LoginServlet extends HttpServlet {
 			HttpSession session = request.getSession();
 			session.setAttribute("loginUser", mDto);
 			//messagePrint("로그인성공",response);
-			url="main.jsp";
+			url="Main.jsp";
 			
 			RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 			dispatcher.forward(request, response);
@@ -87,7 +87,7 @@ public class LoginServlet extends HttpServlet {
 	private void messagePrint(String msg, HttpServletResponse response) throws IOException{
 		response.setContentType("UTF-8");
 		PrintWriter out = response.getWriter();
-        out.println("<script>alert('"+msg+"'); location.href='index.jsp';</script>");
+        out.println("<script>alert('"+msg+"'); location.href='Index.jsp';</script>");
         out.flush(); 
 	}
 }

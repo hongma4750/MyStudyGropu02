@@ -263,9 +263,9 @@ public class MemberDAO {
 	
 	//아이디 알려줄때 사용함
 	//리턴을 MemberDTO 정보를 넘겨줌
-	public MemberDTO getMember(String m_id,String m_email){
+	public MemberDTO getMember(String m_name,String m_email){
 		
-		String sql = "select * from membertable where m_id=? and m_email=?";
+		String sql = "select * from membertable where m_name=? and m_email=?";
 		
 		MemberDTO memberdto =null;
 		
@@ -277,7 +277,7 @@ public class MemberDAO {
 			conn = getConnection();
 			pstmt = conn.prepareStatement(sql);
 			
-			pstmt.setString(1, m_id);
+			pstmt.setString(1, m_name);
 			pstmt.setString(2, m_email);
 			
 			rs = pstmt.executeQuery();

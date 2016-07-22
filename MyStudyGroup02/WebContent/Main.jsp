@@ -10,7 +10,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<script type="text/javascript" src="script/member.js"></script>
+<script src="Javascript/Member/memberUpdateMove.js"></script>
+
 </head>
 <body>
 
@@ -25,7 +26,7 @@
 		<tr>
 		<td	colspan="2" align="center">
 			<input type="submit" value="로그아웃" >&nbsp;&nbsp;
-			<input type="button" value="회원정보변경" onclick="location.href='memberUpdate.do?m_id=${loginUser.m_id}'">
+			<input type="button" value="회원정보변경" onclick="memberUpdateMove()">
 			
 		</td>
 		</tr>

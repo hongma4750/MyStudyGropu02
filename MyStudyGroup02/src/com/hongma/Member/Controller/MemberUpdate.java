@@ -20,32 +20,19 @@ import com.hongma.Member.BEAN.MemberDTO;
 public class MemberUpdate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+ 
     public MemberUpdate() {
         super();
         // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String m_id = request.getParameter("m_id");
-		MemberDAO mDao = MemberDAO.getInstance();
-		
-		MemberDTO mDto= mDao.getMember(m_id);
-		request.setAttribute("mDto", mDto);
-		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("Member/memberUpdate.jsp");
+    	
+		RequestDispatcher dispatcher = request.getRequestDispatcher("Member/MemberUpdate.jsp");
 		dispatcher.forward(request, response);
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		request.setCharacterEncoding("UTF-8");
