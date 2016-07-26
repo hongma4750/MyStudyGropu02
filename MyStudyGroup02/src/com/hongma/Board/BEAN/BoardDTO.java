@@ -11,7 +11,7 @@ public class BoardDTO {
 	private String b_title;
 	private String b_content;
 	private int b_readcount;
-	private Timestamp writedate;
+	private Timestamp b_writedate;
 	
 	public BoardDTO() {
 		// TODO Auto-generated constructor stub
@@ -73,20 +73,21 @@ public class BoardDTO {
 		this.b_readcount = b_readcount;
 	}
 
-	public Timestamp getWritedate() {
-		return writedate;
+	public Timestamp getB_writedate() {
+		return b_writedate;
 	}
 
-	public void setWritedate(Timestamp writedate) {
-		this.writedate = writedate;
+	public void setB_writedate(Timestamp b_writedate) {
+		this.b_writedate = b_writedate;
 	}
 
 	@Override
 	public String toString() {
 		return "BoardDTO [b_num=" + b_num + ", m_name=" + m_name + ", m_email=" + m_email + ", b_pass=" + b_pass
-				+ ", b_title=" + b_title + ", b_content=" + b_content + ", b_readcount=" + b_readcount + ", writedate="
-				+ writedate + "]";
+				+ ", b_title=" + b_title + ", b_content=" + b_content + ", b_readcount=" + b_readcount
+				+ ", b_writedate=" + b_writedate + "]";
 	}
+
 	
 	
 }

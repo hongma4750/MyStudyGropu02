@@ -11,6 +11,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <script src="Javascript/Member/memberUpdateMove.js"></script>
+<script src="Javascript/Board/boardMove.js"></script>
 
 </head>
 <body>
@@ -27,7 +28,7 @@
 		<td	colspan="2" align="center">
 			<input type="submit" value="로그아웃" >&nbsp;&nbsp;
 			<input type="button" value="회원정보변경" onclick="memberUpdateMove()">
-			<input type="button" value="게시판" onclick="">
+			<input type="button" value="게시판" onclick="boardMove('board_list')">
 		</td>
 		</tr>
 	

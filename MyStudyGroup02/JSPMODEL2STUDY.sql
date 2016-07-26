@@ -28,8 +28,8 @@ create table board(
 	m_email varchar2(50) not null,
 	b_title varchar2(50) not null,
 	b_content varchar2(1000) not null,
-	readcount number(4) default 0,
-	writeddate date default sysdate
+	b_readcount number(4) default 0,
+	b_writedate date default sysdate
 );
 
 drop sequence board_seq;
