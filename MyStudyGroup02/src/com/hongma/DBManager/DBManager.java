@@ -14,6 +14,7 @@ public class DBManager {
 	public static Connection getConnection(){
 		Connection conn = null;
 		
+		
 		try{
 			Context initContext = new InitialContext();
 			Context envContext = (Context)initContext.lookup("java:/comp/env");

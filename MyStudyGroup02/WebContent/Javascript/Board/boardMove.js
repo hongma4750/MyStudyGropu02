@@ -7,4 +7,5 @@
 function boardMove(command){
 	alert("작동");
 	location.href="BoardServlet?command="+command;
+	
 }

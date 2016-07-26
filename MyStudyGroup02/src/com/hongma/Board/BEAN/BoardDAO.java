@@ -13,6 +13,7 @@ public class BoardDAO {
 
 	private BoardDAO(){
 		
+		
 	}
 	
 	private static BoardDAO instance = new BoardDAO();
