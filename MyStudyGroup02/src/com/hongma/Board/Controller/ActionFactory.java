@@ -19,6 +19,12 @@ public class ActionFactory {
 		
 		if(command.equals("board_list")){
 			action = new BoardListAction();
+		}else if(command.equals("board_write")){
+			action = new BoardWriteAction();
+		}else if(command.equals("board_write_af")){
+			action = new BoardWriteAFAction();
+		}else if(command.equals("board_detail")){
+			action = new BoardDetail();
 		}
 		return action;
 	}
