@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.hongma.Board.BEAN.BoardDAO;
 import com.hongma.Board.BEAN.BoardDTO;
- 
+  
 public class BoardDetail implements Action{
 
 	@Override

@@ -1,7 +1,7 @@
 /**
  * BoardWrite 에서 모든 폼 다 입력 받았는지 체크
  */
- 
+  
 
 function boardCheck(){
 	if(document.frm.m_name.value.length==0){
