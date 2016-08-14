@@ -4,7 +4,7 @@
  * IdFind 이동시 사용됨
  */
 
-
+ 
 function idFind(){
 	
 	var url="Idfind.do";

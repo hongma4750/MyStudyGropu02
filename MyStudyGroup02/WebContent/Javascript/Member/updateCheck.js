@@ -5,7 +5,7 @@
  *
  */
 
-
+ 
 function updateCheck(){
 	if(document.frm.m_name.value.length==0){
 		alert("이름을 입력해 주세요");

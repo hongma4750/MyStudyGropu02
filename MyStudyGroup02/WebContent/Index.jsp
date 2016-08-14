@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>회원 관리</title>
 </head>
-<body>
+<body> 
 
 <!-- 
 1.비밀번호 찾기 이메일 보내기

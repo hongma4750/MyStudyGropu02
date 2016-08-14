@@ -3,7 +3,7 @@
  *
  * 		뒤로만 이동함
  * 
- */
+ */ 
 
 function goBack(a){
 	if(a==1){

@@ -11,7 +11,7 @@ import java.util.List;
 import com.hongma.DBManager.DBManager;
 
 public class BoardDAO {
-
+ 
 	private BoardDAO(){
 		
 		

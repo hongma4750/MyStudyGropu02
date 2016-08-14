@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.hongma.Member.BEAN.MemberDAO;
-
+ 
 /**
  * Servlet implementation class DeleteMember
  */

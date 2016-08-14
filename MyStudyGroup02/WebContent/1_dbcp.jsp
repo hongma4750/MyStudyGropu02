@@ -5,7 +5,7 @@
     <%@ page import="javax.naming.Context" %>
     <%@ page import="javax.sql.DataSource" %>
     <%@ page import="com.hongma.Member.BEAN.MemberDAO" %>
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">

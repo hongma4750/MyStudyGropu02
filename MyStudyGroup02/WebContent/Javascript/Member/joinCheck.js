@@ -9,7 +9,7 @@
  * 아이디 틀렸는지 체크
  * 비밀번호 같은지 체크
  */
-
+ 
 function joinCheck(){
 	if(document.frm.m_name.value.length==0){
 		

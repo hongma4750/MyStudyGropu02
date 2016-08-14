@@ -2,7 +2,7 @@
  * Member/Login.jsp 안
  * 
  * 아이디 와 비밀번호 공백 있는지 검사
- */
+ */ 
 
 function loginCheck(){
 	if(document.frm.m_id.value.length==0){
