@@ -25,6 +25,8 @@ public class ActionFactory {
 			action = new BoardWriteAFAction();
 		}else if(command.equals("board_detail")){
 			action = new BoardDetail();
+		}else if(command.equals("body")){
+			action = new BodyAction();
 		}
 		return action;
 	}

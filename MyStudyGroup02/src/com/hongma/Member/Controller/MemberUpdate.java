@@ -29,7 +29,7 @@ public class MemberUpdate extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
     	
-		RequestDispatcher dispatcher = request.getRequestDispatcher("Member/MemberUpdate.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp?mode=Member/MemberUpdate");
 		dispatcher.forward(request, response);
 	}
 
@@ -52,7 +52,7 @@ public class MemberUpdate extends HttpServlet {
 		
 		MemberDAO mDao = MemberDAO.getInstance();
 		mDao.updateMember(mDto);
-		response.sendRedirect("login.do");
+		response.sendRedirect("BoardServlet?command=body");
 	}
 
 }

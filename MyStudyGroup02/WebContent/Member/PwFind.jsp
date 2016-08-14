@@ -29,7 +29,7 @@
 <tr>
 	<td colspan="2">
 		<input type ="submit" value="비밀번호" onclick="return idFindCheck()">
-		<input type="button" value="돌아가기" onclick="self.close()">
+		<input type="button" value="돌아가기" onclick="location.href='index.jsp?mode=Body'">
 	</td>
 	
 </tr>

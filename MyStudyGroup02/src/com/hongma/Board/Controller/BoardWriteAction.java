@@ -11,7 +11,7 @@ public class BoardWriteAction implements Action{
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "/Board/BoardWrite.jsp";
+		String url = "index.jsp?mode=Board/BoardWrite";
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 		dispatcher.forward(request, response);

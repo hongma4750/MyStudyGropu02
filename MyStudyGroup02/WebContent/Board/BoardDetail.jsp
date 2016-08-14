@@ -33,10 +33,12 @@
 		</tr>
 	</table>
 	<br><br>
-	<input type="button" value="게시글 수정" onclick="">
-	<input type="button" value="게시글 삭제" onclick="">
-	<input type="button" value="게시글 리스트" onclick="moveBoardList()">
-	<input type="button" value="게시글 등록" onclick="moveBoardWrite()">
+
+		<input type="button" value="게시글 수정" onclick="">
+		<input type="button" value="게시글 삭제" onclick="">
+
+		<input type="button" value="게시글 리스트" onclick="moveBoardList()">
+		<input type="button" value="게시글 등록" onclick="moveBoardWrite()">
 </div>
 
 </body>

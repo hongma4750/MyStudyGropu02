@@ -15,7 +15,13 @@
  -->
 
 <!-- <a href="login.do"> 로그인 페이지로 이동</a>  -->
-<%response.sendRedirect("login.do"); %>
+<div>
+	여기는 index
+</div>
+<div>
+	<%response.sendRedirect("login.do"); %>
+</div>
+
 
 
 </body>

@@ -32,7 +32,7 @@ public class DeleteMember extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher dispatcher = request.getRequestDispatcher("Member/DeleteMember.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp?mode=Member/DeleteMember");
 		dispatcher.forward(request, response);
 	}
 
@@ -52,7 +52,7 @@ public class DeleteMember extends HttpServlet {
 		if(result ==1){
 			HttpSession session = request.getSession();
 			session.invalidate();
-			RequestDispatcher dispatcher = request.getRequestDispatcher("Index.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp?mode=Body");
 			dispatcher.forward(request, response);
 		}else {
 			messagePrint("wrong info",response);

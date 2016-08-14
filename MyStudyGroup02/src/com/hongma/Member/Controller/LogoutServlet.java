@@ -32,7 +32,7 @@ public class LogoutServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		HttpSession session = request.getSession();
 		session.invalidate();
-		RequestDispatcher dispatcher = request.getRequestDispatcher("Member/Login.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp?mode=Body");
 		dispatcher.forward(request, response);
 	}
 

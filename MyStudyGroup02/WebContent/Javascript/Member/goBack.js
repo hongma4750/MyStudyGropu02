@@ -9,7 +9,7 @@ function goBack(a){
 	if(a==1){
 		location.href="login.do";
 	}else if(a==2){
-		location.href="Main.jsp";
+		location.href="index.jsp?mode=Body";
 	}else if(a==3){
 		location.href="memberUpdate.do";
 	}

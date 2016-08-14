@@ -35,7 +35,7 @@ public class LoginServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
-		String url = "Member/Login.jsp";
+		String url = "index.jsp?mode=Member/Login";
 		
 		HttpSession session = request.getSession();
 		
@@ -52,7 +52,7 @@ public class LoginServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url="Member/Login.jsp";
+		String url="index.jsp?mode=Member/Login";
 		
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("utf-8");
@@ -68,7 +68,7 @@ public class LoginServlet extends HttpServlet {
 			HttpSession session = request.getSession();
 			session.setAttribute("loginUser", mDto);
 			//messagePrint("로그인성공",response);
-			url="Main.jsp";
+			url="index.jsp?mode=Body";
 			
 			RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 			dispatcher.forward(request, response);
@@ -87,7 +87,7 @@ public class LoginServlet extends HttpServlet {
 	private void messagePrint(String msg, HttpServletResponse response) throws IOException{
 		response.setContentType("UTF-8");
 		PrintWriter out = response.getWriter();
-        out.println("<script>alert('"+msg+"'); location.href='Index.jsp';</script>");
+        out.println("<script>alert('"+msg+"'); location.href='index.jsp?mode=Body';</script>");
         out.flush(); 
 	}
 }

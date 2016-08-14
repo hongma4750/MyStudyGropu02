@@ -12,7 +12,7 @@
 <body>
 
 
-
+<div>
 <form action="join.do" method="post" name="frm">
 	<table>
 	
@@ -21,12 +21,12 @@
 			<td><input type="text" name="m_name"></td>	
 		</tr>
 		
-		<tr>
+		<tr >
 			<td>ID</td>
 			<td>
-				<input type="text" name="m_id">
-				<input type="hidden" name="reid" >
-				<input type="button" value="중복체크" onclick="idCheck()">
+				<input type="text" name="m_id" style="display:inline-block;" style="width:50%;">
+				<input type="hidden" name="reid" style="display:inline-block;">
+				<input type="button" value="중복체크" onclick="idCheck()" style="display:inline-block;">
 			</td>
 					
 		</tr>
@@ -84,5 +84,6 @@
 	</table>
 
 </form>
+</div>
 </body>
 </html>

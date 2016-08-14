@@ -15,9 +15,10 @@ public class BoardListAction implements Action{
 
 	
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "/Board/BoardList.jsp";
-		
-		
+
+		/*String url = "/Board/BoardList.jsp";*/
+		String url = "no-sidebar.jsp?mode=Board/BoardList";
+
 		BoardDAO bDAO = BoardDAO.getInstance();
 		
 		List<BoardDTO> boardlist = bDAO.selectAllBoards();

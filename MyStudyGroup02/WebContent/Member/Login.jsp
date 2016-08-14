@@ -29,9 +29,9 @@
 		
 		<tr>
 			<td colspan="2" align="center">
-				<input type="submit" value="로그인" onclick="return loginCheck()">&nbsp;&nbsp;
-				<input type="button" value="ID찾기" onclick="return idFind()">&nbsp;&nbsp;
-				<input type="button" value="PW 찾기" onclick="pwFind()">&nbsp;&nbsp;
+				<input type="submit" value="로그인" onclick="return loginCheck()" style="display:inline-block;">
+				<!-- <input type="button" value="ID찾기" onclick="return idFind()">
+				<input type="button" value="PW 찾기" onclick="pwFind()"> -->
 				<input type="button" value="회원가입" onclick="joinMove()">
 			</td>
 			
