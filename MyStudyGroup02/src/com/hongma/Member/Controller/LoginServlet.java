@@ -40,7 +40,7 @@ public class LoginServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		
 		if(session.getAttribute("loginUser") !=null){
-			url="Main.jsp";
+			url="index.jsp?mode=Body";
 		}
 		
 		

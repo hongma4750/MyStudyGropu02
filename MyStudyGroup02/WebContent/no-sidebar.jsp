@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
  <%@ page language="java" contentType="text/html; charset=UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"  %>
+<%session.invalidate(); %>
 <!--
 	Horizons by TEMPLATED
 	templated.co @templatedco
@@ -92,9 +93,9 @@
 							<h2>게시판</h2>
 							
 						</header>
-							<c:if test="${param.mode != null }">
-								<jsp:include page="${param.mode}.jsp" flush="false"/>	
-							</c:if>
+										<c:if test="${param.mode != null }">
+											<jsp:include page="${param.mode}.jsp" flush="false"/>	
+										</c:if>
 					</section>
 				</div>
 			</div>
