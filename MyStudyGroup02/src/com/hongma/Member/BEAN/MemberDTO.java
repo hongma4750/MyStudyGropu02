@@ -1,5 +1,5 @@
 package com.hongma.Member.BEAN;
-
+ 
 public class MemberDTO {
 
 	private String m_name;

@@ -3,7 +3,7 @@
  *	중복 검사 버튼 클릭시 사용 
  */
 
-
+ 
 function idCheck(){
 	if(document.frm.m_id.value==""){
 		alert("아이디를 입력해 주세요");

@@ -1,5 +1,5 @@
 
-//MemberTable
+//MemberTable 
 
 drop table membertable;
 create table membertable(

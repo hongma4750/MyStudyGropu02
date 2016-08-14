@@ -7,4 +7,4 @@
 
 function joinMove(){
 	location.href="join.do";
-}
+} 

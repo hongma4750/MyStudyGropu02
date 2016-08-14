@@ -1,7 +1,7 @@
 /**
  * 
  */
-
+ 
 function deleteRealy(){
 	if(document.frm.m_id.value.length==0){
 		alert("아이디를 입력해주세요");

@@ -3,7 +3,7 @@ package com.hongma.Board.BEAN;
 import java.sql.Timestamp;
 
 public class BoardDTO {
-
+ 
 	private int b_num;
 	private String m_name;
 	private String m_email;
