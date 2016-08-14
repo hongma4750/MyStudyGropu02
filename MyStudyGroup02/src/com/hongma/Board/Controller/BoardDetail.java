@@ -14,7 +14,7 @@ public class BoardDetail implements Action{
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "/Board/BoardDetail.jsp";
+		String url = "index.jsp?mode=Board/BoardDetail";
 		
 		String num = request.getParameter("b_num");
 		int b_num = Integer.parseInt(num);

@@ -32,7 +32,7 @@ public class IdFindServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher dispatcher = request.getRequestDispatcher("Member/IdFind.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp?mode=Member/IdFind");
 		dispatcher.forward(request, response);
 	}
 
@@ -49,7 +49,7 @@ public class IdFindServlet extends HttpServlet {
 		request.setAttribute("memberdto", memberdto);
 		
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("Member/IdFind.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp?mode=Member/IdFind");
 		dispatcher.forward(request, response);
 	}
 	
