@@ -15,6 +15,7 @@
 <div id="wrap">
 <h1>게시판 리스트</h1>
 
+
 <table class="list">
 
 

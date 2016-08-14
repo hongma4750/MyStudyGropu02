@@ -23,6 +23,7 @@
 		<tr>
 		<td>안녕하세요.${loginUser.m_name}(${loginUser.m_id })님</td>
 		</tr>
+		
 	
 		<tr>
 		<td	colspan="2" align="center">

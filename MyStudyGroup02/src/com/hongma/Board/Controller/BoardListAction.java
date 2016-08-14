@@ -17,6 +17,7 @@ public class BoardListAction implements Action{
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String url = "/Board/BoardList.jsp";
 		
+		
 		BoardDAO bDAO = BoardDAO.getInstance();
 		
 		List<BoardDTO> boardlist = bDAO.selectAllBoards();

@@ -6,4 +6,5 @@
  
 function boardMove(command){
 	location.href="BoardServlet?command="+command;
+	
 }

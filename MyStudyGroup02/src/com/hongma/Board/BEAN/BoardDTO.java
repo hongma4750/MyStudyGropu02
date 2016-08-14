@@ -14,7 +14,7 @@ public class BoardDTO {
 	private Timestamp b_writedate;
 	
 	public BoardDTO() {
-		// TODO Auto-generated constructor stub
+	
 	}
 
 	public int getB_num() {

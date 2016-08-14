@@ -10,6 +10,7 @@ public class ActionFactory {
 	
 	public static ActionFactory getInstance(){
 		return instance;
+		
 	}
 	
 	public Action getAction(String command){

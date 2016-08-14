@@ -13,6 +13,7 @@ public class BoardServlet extends HttpServlet {
        
     public BoardServlet() {
         super();
+        
     }
 	
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
