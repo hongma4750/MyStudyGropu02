@@ -27,6 +27,24 @@ public class ActionFactory {
 			action = new BoardDetail();
 		}else if(command.equals("body")){
 			action = new BodyAction();
+		}else if(command.equals("board_check_pass_form")){
+			action = new BoardCheckPassFormAction();
+		}else if(command.equals("board_check_pass")){
+			action = new BoardCheckPassAction();
+		}else if(command.equals("board_update_form")){
+			action = new BoardUpdateFormAction();
+		}else if(command.equals("board_update")){
+			action = new BoardUpdateAction();
+		}else if(command.equals("board_delete")){
+			action = new BoardDeleteAction();
+		}else if(command.equals("board_find")){
+			action = new BoardFindAction();
+		}else if(command.equals("board_answer")){
+			action = new BoardAnswerAction();
+		}else if(command.equals("board_answer_af")){
+			action = new BoardAnswerFormAction();
+		}else if(command.equals("board_comment_write")){
+			action = new BoardCommentWriteAction();
 		}
 		return action;
 	}

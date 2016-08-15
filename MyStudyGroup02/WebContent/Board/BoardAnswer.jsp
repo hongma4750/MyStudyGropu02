@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+        <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>  
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
@@ -11,15 +11,16 @@
 <script type="text/javascript" src="Javascript/Board/moveBoardList.js"></script>
 </head>
 <body>
-
 <div id="wrap" align="center">
-<h1>게시글 등록</h1>
+<h1>답변 등록</h1>
 <form action="BoardServlet" method="post" name="frm">
-	<input type="hidden" name="command" value="board_write_af">
+	<input type="hidden" name="command" value="board_answer_af">
+	<input type="hidden" name="parent_b_num" value="${b_num }"> 
 	<input type="hidden" name="m_id" value="${loginUser.m_id }">
 	<table>
 		<tr>
 			<td>작성자</td>
+			
 			<td><input type="text" name="m_name"></td>
 		</tr>
 		
@@ -49,6 +50,5 @@
 </form>
 
 </div>
-
 </body>
 </html>

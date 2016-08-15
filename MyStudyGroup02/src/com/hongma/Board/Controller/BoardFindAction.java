@@ -10,29 +10,22 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.hongma.Board.BEAN.BoardDAO;
 import com.hongma.Board.BEAN.BoardDTO;
-import com.hongma.Board.BEAN.CommentDAO;
-import com.hongma.Board.BEAN.CommentVO;
-  
-public class BoardDetail implements Action{
+
+public class BoardFindAction implements Action{
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "index.jsp?mode=Board/BoardDetail";
+		String url = "index.jsp?mode=Board/BoardFind";
 		
-		String num = request.getParameter("b_num");
-		int b_num = Integer.parseInt(num);
+		//request작업
+		String findSelect = request.getParameter("findSelect");
+		String findText = request.getParameter("findText");
 		
-		BoardDAO bodao = BoardDAO.getInstance();
-		bodao.updateReadCount(b_num);
-		BoardDTO bodto = bodao.selectBoardDTO(b_num);
+		//DAO 작업
+		BoardDAO dao = BoardDAO.getInstance();
+		List<BoardDTO> list = dao.findBoard(findSelect, findText);
 		
-		CommentDAO comDao = CommentDAO.getInstance();
-		List<CommentVO> comList = comDao.selectAllComment(b_num);
-		
-		
-		
-		request.setAttribute("board", bodto);
-		request.setAttribute("comList", comList);
+		request.setAttribute("boardList", list);
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 		dispatcher.forward(request, response);

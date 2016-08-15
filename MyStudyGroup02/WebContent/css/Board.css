@@ -43,3 +43,32 @@ a:HOVER{
 	text-decoration:underline;
 	color:green;
 }
+
+#find{
+	text-align:center;
+}
+#find select{
+	height:30px
+}
+#findText{
+	display:inline-block;
+	height:30px;
+	width:20%;
+}
+#findButton{
+	height:40px;
+	padding:5px 5px;
+	text-align:center;
+	vertical-align: middle;
+}
+#boardComment{
+	height:80px;
+	width:80%;
+	display:inline-block;
+}
+#boardButton{
+	height:80px;
+	padding:10px 10px;
+	text-align:center;
+	vertical-align: middle;
+}

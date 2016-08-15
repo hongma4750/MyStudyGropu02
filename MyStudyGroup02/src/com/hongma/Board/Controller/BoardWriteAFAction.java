@@ -20,7 +20,7 @@ public class BoardWriteAFAction implements Action{
 		boarddto.setM_email(request.getParameter("m_email"));
 		boarddto.setB_title(request.getParameter("b_title"));
 		boarddto.setB_content(request.getParameter("b_content"));
-		
+		boarddto.setM_id(request.getParameter("m_id"));
 		BoardDAO bodao = BoardDAO.getInstance();
 		bodao.insertBoard(boarddto);
 		
