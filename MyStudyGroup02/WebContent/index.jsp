@@ -90,7 +90,7 @@
 				<c:choose>
 					<c:when test="${loginUser eq null }">
 						<a href="index.jsp?mode=Member/Login">로그인</a>
-						<a href="#">회원가입</a>
+						<a href="index.jsp?mode=Member/Join">회원가입</a>
 						<a href="Idfind.do">ID찾기</a>
 						<a href="pwfind.do">비밀번호 찾기</a>
 					</c:when>
