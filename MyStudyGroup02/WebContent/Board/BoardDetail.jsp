@@ -38,6 +38,7 @@
 			<th>내용</th><td colspan="3"><pre>${board.b_content }</pre></td>
 		</tr>
 		
+		<!-- 댓글!! -->
 		<c:if test="${comList.size() == 0}">
 			<tr >
 				<td colspan="4" style="background-color:#d3d3d3">등록된 댓글이 없습니다.</td>
@@ -47,6 +48,8 @@
 		<c:if test="${comList.size() > 0}">
 			<jsp:include page="../Board/CommentList.jsp" flush="false"/>
 		</c:if>
+		<!-- 댓글!! -->
+		
 		
 		<tr>
 			<td colspan="4">

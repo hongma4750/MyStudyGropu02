@@ -15,6 +15,14 @@ import com.hongma.Board.BEAN.CommentVO;
   
 public class BoardDetail implements Action{
 
+	int b_num=0;
+	public BoardDetail(String b_num) {
+		this.b_num=Integer.parseInt(b_num);
+	}
+	
+	public BoardDetail(){
+		
+	}
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String url = "index.jsp?mode=Board/BoardDetail";

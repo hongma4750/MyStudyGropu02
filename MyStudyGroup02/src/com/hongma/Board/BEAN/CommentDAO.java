@@ -94,4 +94,55 @@ public class CommentDAO {
 			DBManager.Close(conn, pstmt);
 		}
 	}
+
+	//댓글 수정시 사용
+	public void updateComment(CommentVO vo){
+		String sql = "UPDATE board_comment SET com_content=?, com_ref=?, com_step=?, com_depth=? where com_seq = ?";
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		
+		
+		try {
+			conn = DBManager.getConnection();
+			pstmt=conn.prepareStatement(sql);
+			
+			pstmt.setString(1, vo.getCom_content());
+			pstmt.setInt(2, vo.getCom_ref());
+			pstmt.setInt(3, vo.getCom_step());
+			pstmt.setInt(4, vo.getCom_depth());
+			pstmt.setInt(5, vo.getCom_seq());
+			
+			pstmt.executeUpdate();
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		}finally{
+			DBManager.Close(conn, pstmt);
+		}
+	}
+
+	
+	//댓글 삭제시 사용
+	//del 값을 1로 바꿔준다 
+	public void deleteComment(int com_seq){
+		String sql = "update board_comment set com_del = 1 where com_seq = ?";
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		
+		
+		try {
+			conn = DBManager.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, com_seq);
+			
+			pstmt.executeUpdate();
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		}finally{
+			DBManager.Close(conn, pstmt);
+			
+		}
+	}
 }

@@ -45,6 +45,10 @@ public class ActionFactory {
 			action = new BoardAnswerFormAction();
 		}else if(command.equals("board_comment_write")){
 			action = new BoardCommentWriteAction();
+		}else if(command.equals("board_comment_update")){
+			action = new BoardCommentUpdateAction();
+		}else if(command.equals("board_comment_delete")){
+			action = new BoardCommentDeleteAction();
 		}
 		return action;
 	}
