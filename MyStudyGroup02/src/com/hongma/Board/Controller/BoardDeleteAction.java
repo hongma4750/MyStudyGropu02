@@ -16,6 +16,7 @@ public class BoardDeleteAction implements Action{
 		
 		BoardDAO dao = BoardDAO.getInstance();
 		dao.deleteBoard(b_num);
+		dao.deleteSetBoard(b_num);
 		
 		new BoardListAction().execute(request, response);
 		

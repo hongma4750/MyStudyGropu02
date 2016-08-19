@@ -25,19 +25,55 @@
 	<th>번호</th><th>제목</th><th>작성자</th><th>작성일</th><th>조회</th>
 </tr>
 
+<c:if test="${boardList.size() > 0 }">
 <c:forEach var="board" items="${boardList }">
 <jsp:setProperty property="b_depth" name="myArrow" value="${board.b_depth }"/>
+<%-- <jsp:setProperty property="b_parent" name="myArrow" value="${board.b_parent }"/> --%>
 	<tr class="record">
-		<td>${board.b_num }</td>
-		<td>
-			<jsp:getProperty property="arrow" name="myArrow"/>
-			<a href="BoardServlet?command=board_detail&b_num=${board.b_num }">${board.b_title }</a>
-		</td>
-		<td>${board.m_name }</td>
-		<td><fmt:formatDate value="${board.b_writedate }"/></td>
-		<td>${board.b_readcount }</td>
+		
+		
+		<c:choose>
+			
+			<%--답글인 경우 --%>
+			<c:when test="${board.b_step>0 }">
+				<td></td>
+				<td>
+					<jsp:getProperty property="arrow" name="myArrow"/>
+					<%-- <jsp:getProperty property="par" name="myArrow"/> --%>
+					<c:if test="${board.b_parent ==0 }">
+						<span style="color:red;">[원글이 삭제된 게시글 입니다.]</span>
+					</c:if>
+					<a href="BoardServlet?command=board_detail&b_num=${board.b_num }">${board.b_title }</a>
+				</td>
+				<td>${board.m_name }</td>
+				<td><fmt:formatDate value="${board.b_writedate }"/></td>
+				<td>${board.b_readcount }</td>
+			</c:when>
+			
+			<c:otherwise>
+				<td>${board.b_num }</td>
+				<td>
+					<a href="BoardServlet?command=board_detail&b_num=${board.b_num }">${board.b_title }</a>
+				</td>
+				<td>${board.m_name }</td>
+				<td><fmt:formatDate value="${board.b_writedate }"/></td>
+				<td>${board.b_readcount }</td>
+			</c:otherwise>
+		</c:choose>
+		
 	</tr>
 </c:forEach>
+</c:if>
+
+<%--게시글이 없을 경우! --%>
+<c:if test="${boardList.size() ==0 }">
+	<tr class="record" >
+		<td colspan="5" align="center">등록된 게시글이 없습니다.</td>
+	</tr>
+</c:if>
+<%--게시글이 없을 경우! --%>
+
+
 </table>
 
 <!-- 글쓰기 버튼 -->

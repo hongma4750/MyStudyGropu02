@@ -15,6 +15,9 @@
 	<form name="frm" method="post" action="BoardServlet">
 		<input type="hidden" name="command" value="board_update">
 		<input type="hidden" name="b_num" value="${board.b_num }">
+		<input type="hidden" name="b_ref" value="${board.b_ref }">
+		<input type="hidden" name="b_step" value="${board.b_step }">
+		<input type="hidden" name="b_depth" value="${board.b_depth }">
 		
 		<table>
 			<tr>

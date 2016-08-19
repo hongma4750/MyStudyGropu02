@@ -21,6 +21,9 @@ public class BoardUpdateAction implements Action{
 		dto.setM_email(request.getParameter("m_email"));
 		dto.setB_title(request.getParameter("b_title"));
 		dto.setB_content(request.getParameter("b_content"));
+		dto.setB_ref(Integer.parseInt(request.getParameter("b_ref")));
+		dto.setB_step(Integer.parseInt(request.getParameter("b_step")));
+		dto.setB_depth(Integer.parseInt(request.getParameter("b_depth")));
 		
 		BoardDAO dao = BoardDAO.getInstance();
 		dao.updateBoard(dto);

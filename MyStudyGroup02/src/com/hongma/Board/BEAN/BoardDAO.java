@@ -24,7 +24,7 @@ public class BoardDAO {
 
 	// board에 기본적으로 게시판형태로 뿌려주기 위해 리스트에 각 객체를 담아 리턴함
 	public List<BoardDTO> selectAllBoards() {
-		String sql = "select * from board order by b_ref DESC, b_step ASC";
+		String sql = "select * from board where b_del != 1 order by b_ref DESC, b_step ASC";
 
 		List<BoardDTO> list = new ArrayList<BoardDTO>();
 		Connection conn = null;
@@ -73,7 +73,7 @@ public class BoardDAO {
 	// board에서 write 할 때 데이터 입력 할 때 사용
 	public void insertBoard(BoardDTO boarddto) {
 		String sql = "insert into board values (board_seq.nextval,?,?,?,?,?,0,sysdate,?,"
-				+ "(select NVL(max(b_ref),0)+1 from board),0,0,0,0)";
+				+ "(select NVL(max(b_ref),0)+1 from board),0,0,board_seq.nextval,0)";
 
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -165,7 +165,7 @@ public class BoardDAO {
 
 	// 게시판 업로드
 	public void updateBoard(BoardDTO dto) {
-		String sql = "update board set m_name=?,m_email=?,b_pass=?,b_title=?,b_content=?where b_num=?";
+		String sql = "update board set m_name=?,m_email=?,b_pass=?,b_title=?,b_content=?, b_ref=?, b_step=? , b_depth = ?where b_num=?";
 
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -180,8 +180,10 @@ public class BoardDAO {
 			pstmt.setString(i++, dto.getB_pass());
 			pstmt.setString(i++, dto.getB_title());
 			pstmt.setString(i++, dto.getB_content());
+			pstmt.setInt(i++, dto.getB_ref());
+			pstmt.setInt(i++, dto.getB_step());
+			pstmt.setInt(i++, dto.getB_depth());
 			pstmt.setInt(i++, dto.getB_num());
-
 			pstmt.executeUpdate();
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
@@ -241,7 +243,7 @@ public class BoardDAO {
 	// 게시판 삭제
 	// 일단 이걸로 만들고 답글 달렸을때 또 수정 요망
 	public void deleteBoard(int b_num) {
-		String sql = "delete board where b_num=?";
+		String sql = "update board set b_del = 1 where b_num=?";
 
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -256,6 +258,28 @@ public class BoardDAO {
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
 		} finally {
+			DBManager.Close(conn, pstmt);
+		}
+	}
+	
+	//부모글 삭제시 부모글을 가지는 모든 row 의 parent를 0으로 수정한다.
+	public void deleteSetBoard(int b_num){
+		String sql = "update board set b_parent = 0 where b_parent = ?";
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		
+		
+		try {
+			conn = DBManager.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, b_num);
+			
+			pstmt.executeUpdate();
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		}finally{
 			DBManager.Close(conn, pstmt);
 		}
 	}

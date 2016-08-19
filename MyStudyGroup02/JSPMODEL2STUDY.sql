@@ -68,9 +68,12 @@ create table board_comment(
 
 insert into board_comment values (board_comment_seq.nextval,7,'a','하이',sysdate,0,0,0,0,0);
 insert into board_comment values (board_comment_seq.nextval,7,'b','안녕하세요',sysdate,0,0,0,0,0);
+insert into board_comment values (board_comment_seq.nextval,7,'b','안녕하세요',sysdate,0,0,0,board_comment_seq.nextval,0);
+
+select * from board_comment_seq
 drop table board_comment;
 
-drop sequence board_seq;
+drop sequence board_comment_seq;
 create sequence board_comment_seq
 start with 1 increment by 1;
 
